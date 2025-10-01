@@ -1,0 +1,111 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* full width dark overlay  */
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+.top-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  padding: 50px 20px;
+  z-index: 2;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.text p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.Innovative {
+  font-size: 60px;
+  color: #FF00FF;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*  Responsive for tablet mobile */
+@media (max-width: 992px) {
+  .top-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .Innovative {
+    font-size: 45px;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .Innovative {
+    font-size: 35px;
+  }
+
+  .image img {
+    max-width: 350px;
+  }
+}

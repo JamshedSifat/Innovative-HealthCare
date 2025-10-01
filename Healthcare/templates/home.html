@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+  <div class="overlay"></div> <!-- shadow layer -->
+  <div class="top-content">
+    <div class="text">
+      <h1>
+        Welcome to <span class="Innovative">Innovative-healthcare</span>
+      </h1>
+      <p>
+        Discover our comprehensive online healthcare hub, offering doctor appointments,
+        medical supplies, 24/7 emergency services, and blood bank resources.
+      </p>
+    </div>
+    <div class="image">
+      <img src="{% static 'image/home.jpg' %}" alt="Innovative-healthcare Image" />
+    </div>
+  </div>
+</div>
+{% endblock %}
