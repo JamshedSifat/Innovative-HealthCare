@@ -10,11 +10,15 @@
 
    {% block extra-styles %}{% endblock %}
 
-    <title>{% block title %}E-Seba{% endblock %}</title>
+    <title>{% block title %}Innovative-HealthCare{% endblock %}</title>
 </head>
 <body>
     <div class="topnav">
         <a href="{% url 'home' %}">Home</a>
+       <a href="{% url 'products' %}">Products</a>
+        <a href="{% url 'appointment' %}">Appointment</a>
+        <a href="{% url 'emergency' %}">Emergency</a>
+        <a href="{% url 'about' %}">About</a>
 
     </div>
 
