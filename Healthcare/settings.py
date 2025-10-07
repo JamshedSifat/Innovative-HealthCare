@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp',
     'Healthcare',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,12 +51,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Healthcare.urls'
+ROOT_URLCONF = 'myapp.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['myapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

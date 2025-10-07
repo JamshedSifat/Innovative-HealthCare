@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'image/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+   {% block extra-styles %}{% endblock %}
+
+    <title>{% block title %}Innovative-HealthCare{% endblock %}</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'products' %}">Products</a>
+        <a href="{% url 'appointment' %}">Appointment</a>
+        <a href="{% url 'emergency' %}">Emergency</a>
+        <a href="{% url 'about' %}">About</a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="bg-gray-900 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="flex flex-col items-center md:items-start space-y-4">
+                <div class="flex items-center space-x-3">
+                    <img src="{% static 'image/logo.jpg' %}" alt="Logo" class="w-12 h-12 rounded-full">
+                    <span class="text-3xl font-bold text-purple-500">Innovative-HealthCare</span>
+                </div>
+                <p class="text-gray-400">Simplifying healthcare with easy appointments and round-the-clock emergency support.</p>
+            </div>
+
+{#            Contact Info #}
+            <div class="flex flex-col space-y-4">
+                <h3 class="text-xl font-semibold text-purple-400">Contact Information</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li><strong>Address:</strong> Dhaka, Bangladesh</li>
+                    <li><strong>Email:</strong> InnovativeHealthCare@gmail.com</li>
+                    <li><strong>Phone:</strong> +8801966147075</li>
+                    <li><strong>Phone:</strong> +8801540045974</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="border-t border-gray-700 mt-8 pt-6">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between p-2 md:space-y-0">
+                <p class="text-gray-400 text-sm">&copy; 2025 NewDevelopers. All rights reserved.</p>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-400 hover:text-purple-500 transition"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-purple-500 transition"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-purple-500 transition"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/jamshedsifat" class="text-gray-400 hover:text-purple-500 transition"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
